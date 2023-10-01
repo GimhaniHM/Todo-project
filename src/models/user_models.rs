@@ -11,9 +11,7 @@ pub struct User {
     pub email: String,
     pub password: String,
     #[serde(rename = "createdAt", skip_serializing_if = "Option::is_none")]
-    pub created_at: Option<DateTime<Utc>>,
-    #[serde(rename = "_todolist", skip_serializing_if = "Option::is_none")]
-    pub todo_list: Option<Vec<ObjectId>>
+    pub created_at: Option<DateTime<Utc>>
 }
 
 //user login schema

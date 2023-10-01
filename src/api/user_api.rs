@@ -29,8 +29,7 @@ pub async fn register_user(db: Data<MongoRepo>, new_user: Json<User>) -> HttpRes
         name: new_user.name.to_owned(),
         password: new_user.password.to_owned(),
         email: new_user.email.to_owned(),
-        created_at: None,
-        todo_list: None,
+        created_at: None
     };
 
     match db.register_user(data).await {
