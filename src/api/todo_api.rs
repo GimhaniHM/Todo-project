@@ -39,7 +39,7 @@ pub async fn create_todolist(req: HttpRequest, db: Data<MongoRepo>, new_list: Js
 }
 
 //Find all todos by id
-#[get("/all-todos")]
+#[get("/all-todos/{id}")]
 pub async fn get_all_todos(req: HttpRequest, db: Data<MongoRepo>) -> HttpResponse {
 
     let auth = req.headers().get("Authorization");
